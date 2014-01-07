@@ -1,0 +1,230 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm4.aspx.cs" Inherits="WebApplication1.WebForm4" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <title>Staj Kariyer Merkezi</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/elements.css" />
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	<!--[if IE]>
+	<style>
+		.showcase {
+			 zoom: 0.6;
+		}
+	</style>
+	<![endif]-->
+  </head>
+
+  <body>
+
+      <form id="form1" runat="server">
+
+  <!-- Navbar
+	============= -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="WebForm1.aspx">Staj Kariyer Merkezi</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          	<li><a href="#">Staj Başvurusu</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+		  <ul class="nav navbar-nav navbar-right hidden-xs">
+		    <!-- Sign in & Sign up -->
+			<li><a href="WebForm3.aspx">Üye Ol</a></li>
+			<li ><a href="WebForm2.aspx" >Giriş Yap</a></li>
+			<!-- Signed in. Profile Menu -->
+			<li id="cogs-menu"><a href="WebForm6.aspx"><i class="fa fa-gears fa-lg"></i></a></li>
+			<li id="profile-menu" class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ece Bostancı<b class="caret"></b></a>
+			  <ul class="dropdown-menu">
+				<li class="account">
+				  <div class="avatar"><img src="img/face1.jpg" width="100" height="100" alt=""></div>
+				  <p><b>Ece Bostancı</b><br />ecebostanci@gmail.com</p>
+				  <p><a href="WebForm5.aspx">Profilim</a> | <a href="#" id="signout-menu" onclick="return false;">Çıkış Yap</a>
+				  <div class="clearfix"></div>
+				</li>
+			  </ul>
+			</li>
+		  </ul>
+        </div>
+      </div>
+    </div>
+	
+	
+<!-- Main body
+================== -->
+    <div class="section-header">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+		    <!-- Remove the .animated class if you don't want things to move -->
+			<h1 class="animated slideInLeft" style="text-transform:none;"><span>Şirketler</span></h1>
+		  </div>
+		</div>
+	  </div>
+    </div>
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12">
+		  <h1 class="hl text-center top-zero">Sizin İçin Önerdiğimiz Şirketler</h1>
+		  <p class="lead text-center">
+			Üniversite ve lise öğrencileri için en çok staj iş ilanına 
+            Staj Kairyer Merkezi'nden ulaşabilirsiniz. 
+            Özgeçmişinizi oluşturup staj başvurularınızı yapmaya başlayabilirsiniz.
+		  </p>
+		  <br />
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col-md-8 col-md-offset-2">
+		  <div class="team">
+		    <div class="member-left">
+		      <img src="img/company1.png" alt="" class="left">
+			  <h4><a href="#" id= "A1">
+                  <asp:Label ID="Label1" runat="server" Text="Labe"></asp:Label>
+                </h4></a>
+			  <p class="position" style="font-size:14px;">İstanbul</p>
+			  <p style="font-size:14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget consequat sapien. Phasellus ac augue velit. Cras malesuada lectus et purus consequat porttitor.</p>
+			</div>
+		    <div class="member-right">
+		      <img src="img/company2.png" alt="Team Member" class="right">
+			  <h4><a href="#" id= "A2">
+                  <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                </h4></a>
+			  <p class="position" style="font-size:14px;">Ankara</p>
+			  <p style="font-size:14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget consequat sapien. Phasellus ac augue velit. Cras malesuada lectus et purus consequat porttitor.</p>
+			</div>
+		    <div class="member-left">
+		      <img src="img/company3.png" alt="Team Member" class="left">
+			  <h4><a href="#" id= "A3">
+                  <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                </h4></a>
+			  <p class="position" style="font-size:14px;">İzmir</p>
+			  <p style="font-size:14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget consequat sapien. Phasellus ac augue velit. Cras malesuada lectus et purus consequat porttitor.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row">
+	    <div class="col-md-12">
+        <div id="searchback">
+&nbsp;<asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="90px">
+            </asp:DropDownList>
+            <div class="searchbtn">
+        <input type="submit" class="searchbtn" value="Ara">
+        </div>
+        </div>
+        </div>
+	  </div>
+	</div>
+	
+<!-- Foooter
+================== -->
+  <footer>
+	<div class="container">
+	  <div class="row">
+	    <!-- Contact Us 
+		=================  -->
+	    <div class="col-md-4 col-sm-4">
+		  <div class="headline"><h3>Contact us</h3></div>
+		  <div class="content">
+			<p>
+			Eskişehir Osmangazi Üniversitesi<br />
+			Kütahya Yolu,Eskişehir<br />
+			Tel: 0(222) 239 37 50 / 1458<br />
+            Faks: 0(222) 229 20 80<br />
+			Email: <a href="#">www.ogu.edu.tr</a>
+			</p>
+		  </div>
+		</div>
+		<!-- Social icons 
+		===================== -->
+	    <div class="col-md-4 col-sm-4">
+		  <div class="headline"><h3>Go Social</h3></div>
+		  <div class="content social">
+			<p>Stay in touch with us:</p>
+			<ul>
+				<li><a href="#"><i class="fa fa-twitter"></i></a>
+				</li>
+				<li><a href="#"><i class="fa fa-facebook"></i></a>
+				</li>
+				<li><a href="#"><i class="fa fa-pinterest"></i></a>
+				</li>
+				<li><a href="#"><i class="fa fa-youtube"></i></a>
+				</li>
+				<li><a href="#"><i class="fa fa-github"></i></a>
+				</li>
+				<li><a href="#"><i class="fa fa-linkedin"></i></a>
+				</li>
+				<li><a href="#"><i class="fa fa-vk"></i></a>
+				</li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a>
+				</li>
+			</ul>
+			<div class="clearfix"></div>
+		  </div>
+		</div>
+		<!-- Subscribe 
+		=============== -->
+	    <div class="col-md-4 col-sm-4">
+		  <div class="headline"><h3>Subscribe</h3></div>
+		  <div class="content">
+		    <p>Enter your e-mail below to subscribe to our free newsletter.<br />We promise not to bother you often!</p>
+			  <div class="form-group">
+			  <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+			  </div>
+			  <button type="submit" class="hl-btn hl-btn-default">OK</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </footer>
+  <!-- Legal 
+  ============= -->
+  <div class="legal">
+	<div class="container">
+	  <div class="row">
+	    <div class="col-md-12">
+		  <p>&copy; The Highland 2013. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+		</div>
+	  </div>
+	</div>
+  </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+	<script src="js/scrolltopcontrol.js"></script><!-- Scroll to top javascript -->
+      </form>
+  </body>
+
+<!-- Mirrored from 7.pdvop2sz.z8.ru/highland/1.2/team.html by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 25 Dec 2013 13:53:33 GMT -->
+</html>
