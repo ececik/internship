@@ -2,16 +2,15 @@
 
 /* firma ve puanlandırma table larının oluşturulması*/
 
-create table firm(tid int primary key, firmname varchar(50), femail varchar(50),flogo varbinary(100),
+create table firm(tid int identity(1,1) primary key, firmname varchar(50), femail varchar(50),flogo varbinary(100),
 pword varchar(20), adres varchar(50), ftel varchar(20), departman varchar(50), lang varchar(50));
 
-create table puan(pid int primary key,  iemail varchar(50), femail varchar(50), puan varchar(20));
+create table puan(pid int identity (1,1) primary key,  iemail varchar(50), femail varchar(50), puan varchar(20));
  
-create table intern(iid int primary key, iemail varchar(50), ilogo varbinary(100), 
-interntopic varchar(50), languages varchar(20), workex varchar(60), 
-school varchar(50), department varchar(50), itel varchar(20)) 
+create table intern(iid int identity (1,1) primary key, name varchar(50), surname varchar(50), iemail varchar(50),  
+interntopic varchar(50), school varchar(50), department varchar(50),  psw varchar(20), lang varchar(100)) 
 
-create table blog( bid int primary key, iemail varchar(50), tex varchar(1000))
+create table blog( bid int identity (1,1) primary key, iemail varchar(50), tex varchar(100))
  
 /* yanlış sorgulamalarda gerekli silme işlemi için firma ve puan silme*/
  
@@ -54,21 +53,19 @@ go
 
 create procedure add_intern
 (
+@name varchar(50),
+@surname varchar(50),
 @iemail varchar(20),
-@ilogo varbinary(100),
 @interntopic varchar(50),
-@languages varchar(20),
-@workex varchar(60),
 @school varchar(50),
 @department varchar(50),
-@itel varchar(20)
+@pwd varchar(20),
+@lang varchar(100)
 )
 as
 set nocount on
-insert into intern(iemail,ilogo,interntopic,languages,
-workex,school,department,itel)
-values (@iemail,@ilogo,@interntopic,@languages,
-@workex,@school,@department,@itel)
+insert into intern(name,surname,iemail,interntopic,school,department,psw,lang)
+values (@name, @surname, @iemail,@interntopic,@school,@department,@pwd,@lang)
 set nocount off
 go
 
